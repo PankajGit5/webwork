@@ -31,6 +31,26 @@ hamburger_menu.addEventListener("click", () => {
   }
 });
 
+$(function () {
+  let count = -1; // Start with -1 to begin after initial text
+  const initText = "your partner"; // Initial static text
+  const wordsArray = ["developer", "partner", "collaborator"]; // Words to cycle through
+
+  
+  // Set the initial word
+  $("#word").text(initText).delay(2000);
+  
+  // Set the interval for word change
+  setInterval(function () {
+    count++;
+    $("#word").fadeOut(400, function () {
+      // Change the word in the span
+      $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+    });
+  }, 1500); // Change word every 1.5 seconds
+});
+
+
 links.forEach((link) => link.addEventListener("click", () => closeMenu()));
 
 filter_btns.forEach((btn) =>

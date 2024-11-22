@@ -51,6 +51,97 @@ img {
   /* user-select: none; */
 }
 
+
+
+
+
+
+
+
+
+/* Wrapper styling for centering content */
+.wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+h3.header-title {
+  color: black;
+  font-size: 33px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Styling for text animation */
+.test {
+  margin: 0 auto;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 200;
+}
+
+#word {
+  color: #4fb4f1;
+  font-weight: 600;
+}
+
+/******************** ICON FLOAT *********************/
+
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, 16px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.icons a {
+  display: block;
+  animation: float 4s infinite ease-in-out;
+  font-size: 5em;
+  color: #4fb4f1;
+  transition: all 0.3s ease; /* for hover effect */
+}
+
+.icons a:hover {
+  color: #80FFDB;
+}
+
+.one-mill{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
   position: relative;
   z-index: 5;
@@ -344,7 +435,7 @@ nav.open .links {
 }
 
 .header-content .container.grid-2 {
-  grid-template-columns: 2.5fr 3.5fr;
+  grid-template-columns: 1fr;
   min-height: calc(100vh - 6rem);
   padding-bottom: 2.5rem;
   text-align: left;
@@ -721,7 +812,10 @@ header .circle {
 }
 
 .about img {
-  max-width: 600px;
+
+    border-radius: 50%;
+    max-width: 300px;
+
 }
 
 .about .text {
